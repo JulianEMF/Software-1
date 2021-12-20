@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="584.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.AddPartController">
+   <children>
+      <Label layoutX="65.0" layoutY="34.0" text="Add Part">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font></Label>
+      <RadioButton fx:id="inHousePart" layoutX="207.0" layoutY="67.0" mnemonicParsing="false" onAction="#onInHouse" selected="true" text="In House">
+         <toggleGroup>
+            <ToggleGroup fx:id="originToggle" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="outsourcedPart" layoutX="295.0" layoutY="67.0" mnemonicParsing="false" onAction="#onOutsourced" text="Outsourced" toggleGroup="$originToggle" />
+      <Label layoutX="65.0" layoutY="110.0" text="ID" />
+      <Label layoutX="65.0" layoutY="140.0" text="Name" />
+      <Label layoutX="65.0" layoutY="170.0" text="Inventory" />
+      <Label layoutX="65.0" layoutY="200.0" text="Price/Cost" />
+      <Label layoutX="65.0" layoutY="230.0" text="Minimum" />
+      <Label layoutX="65.0" layoutY="260.0" text="Maximum" />
+      <Label fx:id="originLabel" layoutX="65.0" layoutY="290.0" text="Machine ID" />
+      <Button fx:id="savePartButton" layoutX="131.0" layoutY="336.0" mnemonicParsing="false" onAction="#savePartHandler" text="Save" />
+      <Button layoutX="196.0" layoutY="336.0" mnemonicParsing="false" onAction="#toMainScreen" text="Cancel" />
+      <TextField fx:id="partIdField" alignment="CENTER" disable="true" editable="false" layoutX="158.0" layoutY="105.0" promptText="ID Auto Generated" />
+      <TextField fx:id="partNameField" layoutX="158.0" layoutY="135.0" />
+      <TextField fx:id="partInventoryField" layoutX="158.0" layoutY="165.0" />
+      <TextField fx:id="partPriceField" layoutX="158.0" layoutY="195.0" />
+      <TextField fx:id="partMinField" layoutX="158.0" layoutY="225.0" />
+      <TextField fx:id="partMaxField" layoutX="158.0" layoutY="255.0" />
+      <TextField fx:id="partMachineIdField" layoutX="158.0" layoutY="285.0" />
+      <Pane layoutX="329.0" layoutY="106.0" prefHeight="204.0" prefWidth="233.0" style="-fx-background-color: lightgray;">
+         <children>
+            <Label fx:id="exceptionLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="7.0" layoutY="5.0" prefHeight="196.0" prefWidth="218.0" textAlignment="CENTER" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
